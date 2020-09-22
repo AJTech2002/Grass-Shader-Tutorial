@@ -15,7 +15,7 @@ Shader "Unlit/URPPlanedDepth"
         Speed("Speed",Float) = 1.0
         _Vect("Vector",Color) = (0.6,0.6,0.6,1)
         _Darker("Darker",Color) = (0.5,0.5,0.5,1)
-        _LightAffectance("Light Affectance",Float) = 0.5"
+        _LightAffectance("Light Affectance",Float) = 0.5
         _TranslucencyFactor("Translucency Factor", Float) = 0.5
         Ang("Angle",Float) = 1.0
         // Specular vs Metallic workflow

@@ -144,6 +144,10 @@ sampler2D _WindDistortionMap;
 float4 _WindDistortionMap_ST; 
 
 
+/*
+
+    */
+
 [maxvertexcount(10)]
 void LitPassGeom(triangle Varyings input[3], inout TriangleStream<Varyings> outStream)
 {
@@ -156,13 +160,8 @@ void LitPassGeom(triangle Varyings input[3], inout TriangleStream<Varyings> outS
     }
     else {
         
-    for (int i = 0; i <3; i++)
-    {
-
+        int i = 0;
         Varyings o = input[i];
-
-        
-
         float2 uv = (input[i].positionOS.xy*_Time.xy*_WindFrequency);
 
         float4 windSample = tex2Dlod(_WindDistortionMap, float4(uv, 0, 0)*2-1)*_WindStrength; 
@@ -185,14 +184,10 @@ void LitPassGeom(triangle Varyings input[3], inout TriangleStream<Varyings> outS
 
         float3 newObjectSpace2 = ((rotatedNormal * (Height + randH) + rotatedTangent * (Base + randH)) + o.positionWSAndFogFactor.xyz);
         o3.positionCS = TransformWorldToHClip(newObjectSpace2);
-
-    
-
+        
         Varyings o4 = input[i];
 
         float3 newObjectSpace3 = ((rotatedNormal) * (Height + randH) + o.positionWSAndFogFactor.xyz);
-
-     
 
         o4.positionCS = TransformWorldToHClip(newObjectSpace3);
 
@@ -219,8 +214,6 @@ void LitPassGeom(triangle Varyings input[3], inout TriangleStream<Varyings> outS
         outStream.Append(o2);
         outStream.Append(o);
         outStream.RestartStrip();
-
-    }
     }
 
 }
