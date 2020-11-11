@@ -111,3 +111,4 @@ Material:
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Vect: {r: 0.4611104, g: 0.7176471, b: 0.3411765, a: 1}
     - _WindFrequency: {r: 0.05, g: 0.05, b: 0, a: 0}
+  m_BuildTextureStacks: []

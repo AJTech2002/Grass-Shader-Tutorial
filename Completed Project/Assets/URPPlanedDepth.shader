@@ -11,13 +11,16 @@ Shader "Unlit/URPPlanedDepth"
         _WindDistortionMap("Wind Distortion Map", 2D) = "white" {}
         _WindFrequency("Wind Frequency", Vector) = (0.05, 0.05, 0, 0)
         _WindStrength ("Wind Strength",Float)=0.0
-        _ShadowAffectance("Shadow Affectance",Float)=0.2
+        
+            _ShadowAffectance("Shadow Affectance",Float)=0.2
         Speed("Speed",Float) = 1.0
         _Vect("Vector",Color) = (0.6,0.6,0.6,1)
         _Darker("Darker",Color) = (0.5,0.5,0.5,1)
-        _LightAffectance("Light Affectance",Float) = 0.5
+        
+            _LightAffectance("Light Affectance",Float) = 0.5
         _TranslucencyFactor("Translucency Factor", Float) = 0.5
-        Ang("Angle",Float) = 1.0
+        
+            Ang("Angle",Float) = 1.0
         // Specular vs Metallic workflow
         AlphaCutoff("AlphaCut",Float) = 0.5
 

@@ -71,9 +71,9 @@ Material:
     m_Floats:
     - AlphaCutoff: 0.5
     - Ang: 1
-    - Base: 0.5
+    - Base: 0.74
     - DoublePlaned: 0
-    - Height: 1
+    - Height: 1.29
     - Speed: 1
     - _AlphaClip: 0
     - _Blend: 0
@@ -85,7 +85,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _LightAffectance: 0.32
+    - _LightAffectance: 0.05
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _QueueOffset: 0
@@ -97,7 +97,7 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _TessellationUniform: 1
-    - _TranslucencyFactor: 0.13
+    - _TranslucencyFactor: 0.05
     - _VertexColorTesselation: 0
     - _WindStrength: 1.22
     - _WorkflowMode: 1
@@ -110,3 +110,4 @@ Material:
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Vect: {r: 0.3392119, g: 0.5471698, b: 0.24003202, a: 1}
     - _WindFrequency: {r: 0.05, g: 0.05, b: 0, a: 0}
+  m_BuildTextureStacks: []
