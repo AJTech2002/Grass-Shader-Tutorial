@@ -164,9 +164,9 @@ void LitPassGeom(triangle Varyings input[3], inout TriangleStream<Varyings> outS
 		Varyings o = input[i];
 		float2 uv = (input[i].positionOS.xy * _Time.xy * _WindFrequency);
 
-		float4 windSample = tex2Dlod(_WindDistortionMap, float4(uv, 0, 0) * 2 - 1) * _WindStrength;
+		float4 windSample = tex2Dlod(_WindDistortionMap, float4(uv, 0, 0) ) * _WindStrength;
 
-		float3 rotatedTangent = normalize(mul(o.tangentWS, RotY(rand(o.positionWSAndFogFactor) * 90)));
+		float3 rotatedTangent = normalize(mul(o.tangentWS, RotY(rand(o.positionWSAndFogFactor.xyz) * 90)));
 
 		float3 rotatedNormalZ = mul(o.normalWS, RotZ(windSample.x));
 
@@ -264,7 +264,7 @@ half4 LitPassFragment(Varyings input, bool vf : SV_IsFrontFace) : SV_Target
 
 	//Calculating the base color
 	half3 bakedGI = SampleSH(normalWS);
-	half3 color = GlobalIllumination(brdfData, bakedGI, surfaceData.occlusion, normalWS, viewDirectionWS);
+	//half3 color = GlobalIllumination(brdfData, bakedGI, surfaceData.occlusion, normalWS, viewDirectionWS);
 
 	half3 color = (0, 0, 0);
 

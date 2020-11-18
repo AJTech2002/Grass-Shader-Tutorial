@@ -85,7 +85,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _LightAffectance: 0.05
+    - _LightAffectance: 0.19
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _QueueOffset: 0
@@ -97,9 +97,9 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _TessellationUniform: 1
-    - _TranslucencyFactor: 0.05
+    - _TranslucencyFactor: 0.09
     - _VertexColorTesselation: 0
-    - _WindStrength: 1.22
+    - _WindStrength: 1.32
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
